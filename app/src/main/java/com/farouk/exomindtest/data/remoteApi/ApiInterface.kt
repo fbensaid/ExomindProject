@@ -1,6 +1,6 @@
 package com.farouk.exomindtest.data.remoteApi
 
-import com.farouk.exomindtest.data.Constants
+import com.farouk.exomindtest.utils.Constants
 import com.farouk.exomindtest.data.model.AlbumResponse
 import com.farouk.exomindtest.data.model.PhotoResponse
 import com.farouk.exomindtest.data.model.user.UserResponse

@@ -20,7 +20,5 @@ class RoomModule(mApplication: Application) {
     internal fun providesRoomDatabase(): AppDataBase {
         return appDatabase
     }
-
-
-
+    
 }

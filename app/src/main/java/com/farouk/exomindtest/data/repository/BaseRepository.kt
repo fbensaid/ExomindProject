@@ -1,18 +1,16 @@
-package com.farouk.exomindproject.data.repository
+package com.farouk.exomindtest.data.repository
 
 import android.util.Log
-import com.farouk.exomindproject.ExomindApplication
-import com.farouk.exomindproject.data.remoteApi.Output
+import com.farouk.exomindtest.ExomindApplication
+import com.farouk.exomindtest.data.remoteApi.Output
 import retrofit2.Response
 import java.io.IOException
 
 open class BaseRepository {
 
-
     constructor() {
         ExomindApplication.appComponent.inject(baseRepository = this)
     }
-
 
     suspend fun <T : Any> safeApiCall(call : suspend()-> Response<T>, error : String) :  T?{
         val result = apiOutput(call, error)

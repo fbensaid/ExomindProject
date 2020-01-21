@@ -1,8 +1,8 @@
 package com.farouk.exomindtest.data.remoteApi
 
 import com.farouk.exomindtest.ExomindApplication
-import com.farouk.exomindtest.data.AppUtils
-import com.farouk.exomindtest.data.Constants
+import com.farouk.exomindtest.utils.AppUtils
+import com.farouk.exomindtest.utils.Constants
 import java.io.IOException
 
 import okhttp3.Interceptor

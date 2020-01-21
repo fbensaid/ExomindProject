@@ -1,7 +1,7 @@
-package com.farouk.exomindproject.data.repository
+package com.farouk.exomindtest.data.repository
 
-import com.farouk.exomindproject.data.model.user.UserResponse
-import com.farouk.exomindproject.data.remoteApi.ApiInterface
+import com.farouk.exomindtest.data.model.user.UserResponse
+import com.farouk.exomindtest.data.remoteApi.ApiInterface
 
 class UserRepository(private val api: ApiInterface) : BaseRepository() {
 

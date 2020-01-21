@@ -1,13 +1,10 @@
-package com.farouk.exomindtest.data
+package com.farouk.exomindtest.utils
 
 
 class Constants {
 
-
     companion object {
-
         const val BASE_URL: String = "http://jsonplaceholder.typicode.com/"
-
     }
 
     object EndPoints {

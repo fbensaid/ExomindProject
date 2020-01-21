@@ -1,4 +1,4 @@
-package com.farouk.exomindtest.data
+package com.farouk.exomindtest.utils
 
 import android.content.Context
 import android.net.ConnectivityManager

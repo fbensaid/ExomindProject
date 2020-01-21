@@ -1,9 +1,7 @@
 package com.farouk.exomindtest.data.remoteApi
 
 
-import com.farouk.exomindproject.data.remoteApi.ApiInterface
-import com.farouk.exomindproject.data.remoteApi.EndpointInterceptor
-import com.farouk.exomindtest.data.Constants
+import com.farouk.exomindtest.utils.Constants
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
