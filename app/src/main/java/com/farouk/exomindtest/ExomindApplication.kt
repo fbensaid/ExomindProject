@@ -3,10 +3,10 @@ package com.farouk.exomindtest
 
 import android.app.Application
 import android.content.Context
-import com.farouk.exomindtest.dagger.AppComponent
-import com.farouk.exomindtest.dagger.AppModule
-import com.farouk.exomindtest.dagger.DaggerAppComponent
-import com.farouk.exomindtest.dagger.RoomModule
+import com.farouk.exomindtest.data.dagger.AppComponent
+import com.farouk.exomindtest.data.dagger.AppModule
+import com.farouk.exomindtest.data.dagger.DaggerAppComponent
+import com.farouk.exomindtest.data.dagger.RoomModule
 
 class ExomindApplication : Application() {
 

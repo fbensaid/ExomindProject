@@ -1,14 +1,14 @@
-package com.farouk.exomindtest.database
+package com.farouk.exomindtest.data.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.farouk.exomindtest.model.AlbumResponse
-import com.farouk.exomindproject.data.model.PhotoResponse
+import com.farouk.exomindtest.data.model.AlbumResponse
+import com.farouk.exomindtest.data.model.PhotoResponse
 
 
-@Database(entities = [AlbumResponse::class,PhotoResponse::class], version = 1)
+@Database(entities = [AlbumResponse::class, PhotoResponse::class], version = 1)
 abstract class AppDataBase : RoomDatabase() {
 
 

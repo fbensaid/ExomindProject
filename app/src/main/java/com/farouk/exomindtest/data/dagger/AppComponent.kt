@@ -1,11 +1,9 @@
-package com.farouk.exomindtest.dagger
+package com.farouk.exomindtest.data.dagger
 
 
 import android.app.Application
 import com.farouk.exomindproject.data.database.AppDataBase
 import com.farouk.exomindtest.ExomindApplication
-import com.farouk.exomindtest.data.dagger.AppModule
-import com.farouk.exomindtest.data.dagger.RoomModule
 import dagger.Component
 import javax.inject.Singleton
 

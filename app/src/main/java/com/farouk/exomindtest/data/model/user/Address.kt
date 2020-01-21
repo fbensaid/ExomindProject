@@ -1,4 +1,4 @@
-package com.farouk.exomindtest.model.user
+package com.farouk.exomindtest.data.model.user
 
 import com.farouk.exomindproject.data.model.user.Geo
 

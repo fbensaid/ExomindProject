@@ -1,4 +1,4 @@
-package com.farouk.exomindtest.model
+package com.farouk.exomindtest.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -1,4 +1,4 @@
-package com.farouk.exomindtest.dagger
+package com.farouk.exomindtest.data.dagger
 
 import android.app.Application
 import dagger.Provides
