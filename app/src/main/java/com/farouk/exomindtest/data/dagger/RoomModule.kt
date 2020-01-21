@@ -3,8 +3,8 @@ package com.farouk.exomindtest.data.dagger
 import android.app.Application
 import dagger.Provides
 import androidx.room.Room
-import com.farouk.exomindproject.data.database.AppDataBase
-import com.farouk.exomindproject.data.remoteApi.ApiInterface
+import com.farouk.exomindtest.data.database.AppDataBase
+
 import dagger.Module
 import javax.inject.Singleton
 
