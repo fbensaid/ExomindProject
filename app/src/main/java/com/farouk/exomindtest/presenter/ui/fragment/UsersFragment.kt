@@ -5,6 +5,7 @@ import android.view.*
 import android.widget.SearchView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.farouk.exomindtest.presenter.ui.adapter.UsersAdapter
 import com.farouk.exomindtest.R
@@ -50,7 +51,8 @@ class UsersFragment : BaseFragment(), UsersClickListener {
     }
 
     override fun onRecyclerViewItemClick(view: View, user: UserResponse) {
-
+        val directions =UsersFragmentDirections.actionUserFragmentToAlbumFragment(user.id.toString())
+        findNavController().navigate(directions)
     }
 
     private fun searchLaboratory() {

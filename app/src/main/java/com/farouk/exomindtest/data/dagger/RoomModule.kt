@@ -14,11 +14,9 @@ class RoomModule(mApplication: Application) {
 
     private val appDatabase: AppDataBase =
         Room.databaseBuilder(mApplication, AppDataBase::class.java!!, "demo-db").build()
-
     @Singleton
     @Provides
     internal fun providesRoomDatabase(): AppDataBase {
         return appDatabase
     }
-    
 }

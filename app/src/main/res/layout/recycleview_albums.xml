@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="albumListResponseData"
+            type="com.farouk.exomindtest.data.model.AlbumResponse" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_view_albums"
+        app:cardCornerRadius="@dimen/single_day_layout_corner_radius"
+        app:cardElevation="@dimen/single_day_layout_elevation"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="@dimen/single_day_layout_content_padding">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/card_view_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:clickable="true"
+                app:civ_border_width="@dimen/dimen_3dp"
+                app:civ_border_color="@android:color/white"
+                android:id="@+id/profile_picture"
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="@dimen/dimen_50dp"
+                android:elevation="@dimen/changed_dimen_5dp"
+                android:scaleType="centerCrop"
+                android:padding="@dimen/dimen_5dp"
+                android:src="@drawable/album" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{albumListResponseData.title}" />
+
+                <TextView
+                    android:id="@+id/id_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(albumListResponseData.userId)}" />
+
+                <TextView
+                    android:id="@+id/id_album"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(albumListResponseData.id)}" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>
