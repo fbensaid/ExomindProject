@@ -5,6 +5,7 @@
     android:id="@+id/navigation"
     app:startDestination="@+id/userFragment">
 
+
     <fragment android:id="@+id/userFragment"
         android:name="com.farouk.exomindtest.presenter.ui.fragment.UsersFragment"
         android:label="Home"
@@ -21,6 +22,17 @@
         <argument android:name="userId"
             app:argType="string"
             android:defaultValue="1"/>
+        <action
+            android:id="@+id/action_albumFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
     </fragment>
 
+    <fragment android:id="@+id/photoFragment"
+        android:name="com.farouk.exomindtest.presenter.ui.fragment.PhotosFragment"
+        android:label="Photo"
+        tools:layout="@layout/fragment_photo">
+        <argument android:name="albumId"
+            app:argType="string"
+            android:defaultValue="1"/>
+    </fragment>
 </navigation>

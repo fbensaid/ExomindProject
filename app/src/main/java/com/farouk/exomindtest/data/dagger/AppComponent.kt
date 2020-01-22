@@ -19,7 +19,6 @@ interface AppComponent {
     fun inject(mainActivity: MainActivity)
     fun inject(appComponent: ExomindApplication)
     fun appDataBase(): AppDataBase
-    //fun userRepository(): UserRepository
     fun application(): Application
 
 }

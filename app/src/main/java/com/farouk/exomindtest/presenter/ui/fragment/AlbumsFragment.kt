@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.farouk.exomindtest.R
 import com.farouk.exomindtest.data.model.AlbumResponse
@@ -49,7 +50,8 @@ class AlbumsFragment : BaseFragment(), AlbumsClickListener {
     }
 
     override fun onRecyclerViewItemClick(view: View, album: AlbumResponse) {
-
+        val directions =AlbumsFragmentDirections.actionAlbumFragmentToPhotoFragment(album.id.toString())
+        findNavController().navigate(directions)
     }
 
 

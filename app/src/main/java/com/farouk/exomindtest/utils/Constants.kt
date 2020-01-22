@@ -5,6 +5,10 @@ class Constants {
 
     companion object {
         const val BASE_URL: String = "http://jsonplaceholder.typicode.com/"
+        const val USER_ID: String = "userId"
+        const val ALBUM_ID: String = "albumId"
+
+
     }
 
     object EndPoints {

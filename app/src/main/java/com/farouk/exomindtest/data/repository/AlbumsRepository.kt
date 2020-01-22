@@ -9,7 +9,7 @@ import com.farouk.exomindtest.data.remoteApi.ApiInterface
 class AlbumsRepository(private val api: ApiInterface) : BaseRepository() {
 
     private var albumDao: AlbumDao = AppDataBase.invoke(ExomindApplication.instance!!).getAlbumsDao()
-    //get saved list of user or from using api call
+    //get saved list of user from db or from using api call
     suspend fun getAlbumsByUser(userId:String): MutableList<AlbumResponse>? {
         var dbUserAlbum=albumDao.getAlbumByUser(userId)
         return if(!dbUserAlbum.isNullOrEmpty()){
@@ -19,7 +19,7 @@ class AlbumsRepository(private val api: ApiInterface) : BaseRepository() {
                 call = { api.getAlbumsList(userId).await() },
                 error = "Error fetching user"
             )?.toMutableList().also {
-                // insert to db if room is empty
+                // insert to db if album is empty
                 insertAlbumsToDb(it!!)
             }
         }
