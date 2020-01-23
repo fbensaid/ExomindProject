@@ -51,17 +51,6 @@
                     android:layout_height="wrap_content"
                     android:text="@{albumListResponseData.title}" />
 
-                <TextView
-                    android:id="@+id/id_user"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{String.valueOf(albumListResponseData.userId)}" />
-
-                <TextView
-                    android:id="@+id/id_album"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{String.valueOf(albumListResponseData.id)}" />
 
             </LinearLayout>
 

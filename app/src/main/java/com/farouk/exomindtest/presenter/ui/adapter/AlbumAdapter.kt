@@ -11,14 +11,14 @@ import com.farouk.exomindtest.presenter.ui.listener.AlbumsClickListener
 
 
 class AlbumAdapter(
-    private val listofAlbumResponse: List<AlbumResponse>,
-    private val listner: AlbumsClickListener
+     listOfAlbumResponse: List<AlbumResponse>,
+     private var listener: AlbumsClickListener
 
 ) : RecyclerView.Adapter<AlbumAdapter.AlbumViewHolder>() {
-    private var listofAlbums = listofAlbumResponse
+    private var listOfAlbums = listOfAlbumResponse
 
     override fun getItemCount(): Int {
-        return listofAlbums.size
+        return listOfAlbums.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = AlbumViewHolder(
@@ -32,12 +32,12 @@ class AlbumAdapter(
 
     override fun onBindViewHolder(holder: AlbumViewHolder, position: Int) {
         holder.recycleviewAlbumsBinding.albumListResponseData =
-            listofAlbums[position]
+            listOfAlbums[position]
 
         holder.recycleviewAlbumsBinding.cardViewAlbums.setOnClickListener {
-            listner.onRecyclerViewItemClick(
+            listener.onRecyclerViewItemClick(
                 holder.recycleviewAlbumsBinding.cardViewAlbums,
-                listofAlbums[position]
+                listOfAlbums[position]
            )
         }
     }

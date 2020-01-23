@@ -37,7 +37,8 @@
                 android:elevation="@dimen/changed_dimen_5dp"
                 android:scaleType="centerCrop"
                 android:padding="@dimen/dimen_5dp"
-                android:src="@drawable/album" />
+                android:src="@{photoListResponseData.url}"
+                 />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -51,19 +52,6 @@
                     android:layout_height="wrap_content"
                     android:text="@{photoListResponseData.title}" />
 
-                <TextView
-                    android:id="@+id/id_album"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{String.valueOf(photoListResponseData.albumId)}" />
-
-
-
-                <TextView
-                    android:id="@+id/id_photo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{String.valueOf(photoListResponseData.id)}" />
             </LinearLayout>
 
         </LinearLayout>

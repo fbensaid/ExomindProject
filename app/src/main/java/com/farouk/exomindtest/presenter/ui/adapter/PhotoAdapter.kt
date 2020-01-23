@@ -2,30 +2,25 @@ package com.farouk.exomindtest.presenter.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.farouk.exomindtest.R
-import com.farouk.exomindtest.data.model.AlbumResponse
 import com.farouk.exomindtest.data.model.PhotoResponse
-import com.farouk.exomindtest.data.model.user.UserResponse
-import com.farouk.exomindtest.databinding.RecycleviewAlbumsBinding
 import com.farouk.exomindtest.databinding.RecycleviewPhotosBinding
-import com.farouk.exomindtest.databinding.RecycleviewUserBinding
-import com.farouk.exomindtest.presenter.ui.listener.AlbumsClickListener
 import com.farouk.exomindtest.presenter.ui.listener.PhotoClickListener
-import com.farouk.exomindtest.presenter.ui.listener.UsersClickListener
+import com.squareup.picasso.Picasso
 
 class PhotoAdapter(
-    private val listofphotoResponse: List<PhotoResponse>,
-    private val listner: PhotoClickListener
+      listOfPhotoResponse: List<PhotoResponse>,
+    private val listener: PhotoClickListener
 
 ) : RecyclerView.Adapter<PhotoAdapter.PhotoViewHolder>() {
-    private var listofPhoto = listofphotoResponse
+    private var listOfPhoto = listOfPhotoResponse
 
     override fun getItemCount(): Int {
-        return listofPhoto.size
+        return listOfPhoto.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = PhotoViewHolder(
@@ -37,14 +32,22 @@ class PhotoAdapter(
         )
     )
 
+    companion object {
+        @JvmStatic
+        @BindingAdapter("android:src")
+        fun setImageUri(view: ImageView, imageUri: String?) {
+            Picasso.get().load(imageUri).into(view)
+        }
+    }
+
     override fun onBindViewHolder(holder: PhotoViewHolder, position: Int) {
         holder.recycleviewPhotoBinding.photoListResponseData =
-            listofPhoto[position]
+            listOfPhoto[position]
 
         holder.recycleviewPhotoBinding.cardViewPhoto.setOnClickListener {
-            listner.onRecyclerViewItemClick(
+            listener.onRecyclerViewItemClick(
                 holder.recycleviewPhotoBinding.cardViewPhoto,
-                listofPhoto[position]
+                listOfPhoto[position]
            )
         }
     }
